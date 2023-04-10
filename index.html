@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS Hello World</title>
+    <script src="vue.js">
+      Teste
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      {{mensagem}}<br />
+      <!--Binding de elemento data-->
+      Valor Total: {{valorTotal}}<br />
+      Logado: {{logado}}<br />
+      Hobbie: {{hobbies[0]}}<br />
+      Perfil: {{perfil.site}}, {{perfil.cursos[0].nome}}
+      <!--Interpolando objetos e arrays-->
+    </div>
+    <script>
+      options = {
+        el: "#app",
+        data: {
+          mensagem: "Primeiro template controlado pelo teste",
+          valorTotal: 150.47,
+          logado: false,
+          hobbies: [
+            "Dormir",
+            "Colecionar Vídeo Games antigos",
+            "Correr",
+            "Trilhas",
+          ],
+          perfil: {
+            nome: "Jorge Sant Ana",
+            site: "jorgesantana.net.br",
+            idade: 32,
+            cursos: [
+              {
+                nome: "Laravel",
+                cargaHoraria: "50 Horas",
+              },
+              {
+                nome: "Bancos de dados Relacionais",
+                cargaHoraria: "40 horas",
+              },
+            ],
+          },
+        },
+      };
+      const vm = new Vue(options); //vm = viewModel
+      console.log(vm);
+    </script>
+  </body>
+</html>

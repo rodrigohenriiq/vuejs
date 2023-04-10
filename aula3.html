@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula2 VueJS</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ somar() }}<br>
+        {{ subtrair() }}<br>
+        {{ dividir() }}<br>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                n1: 10,
+                n2:5
+            },
+            methods:{
+                somar: function somar(){
+                    return this.n1 + this.n2;
+                },
+                subtrair: function (){
+                    return this.n1-this.n2
+                },
+                dividir(){
+                    return this.n1 / this.n2
+                }
+            }
+        })
+    </script>
+</body>
+</html>

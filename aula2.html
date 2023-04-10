@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS - Aula 2</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ somar() }}<br>
+        {{ subtrair() }}<br>
+        {{ multiplicar() }}<br>
+        {{ dividir() }}<br>
+
+    </div>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data:{
+
+            },
+            methods:{
+                somar: function somar(){
+                    return 4+2;
+                },//convencional para definição de funções 
+                subtrair:function(){
+                    return 4-2; //Anônima
+                },
+                multiplicar: () => {
+                    return 4*2; //arrow function
+                },
+                dividir(){
+                    return 4/2; //Forma enxuta de definir os pares de chave/valor
+                }
+            }
+        })
+    </script>
+</body>
+</html>
